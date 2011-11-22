@@ -1,7 +1,10 @@
-alias r='rvm use 1.8.7'
+alias r='rvm use 1.9.2'
 
-alias sc='script/console'
-alias sg='script/generate'
-alias sd='script/destroy'
+alias migrate='r db:migrate'
 
-alias migrate='rake db:migrate db:test:clone'
+# Rails 3
+alias rs='rails server'
+alias rc='rails console'
+alias r='bundle exec rake'
+alias s='bundle exec rspec'
+
