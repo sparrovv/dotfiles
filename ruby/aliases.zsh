@@ -8,3 +8,4 @@ alias rc='rails console'
 alias r='bundle exec rake'
 alias s='bundle exec rspec'
 
+alias fman='bundle exec foreman start'
