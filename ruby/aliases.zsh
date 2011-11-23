@@ -9,3 +9,4 @@ alias r='bundle exec rake'
 alias s='bundle exec rspec'
 
 alias fman='bundle exec foreman start'
+alias rlog='tail -f log/development.log'
