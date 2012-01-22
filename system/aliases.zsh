@@ -11,7 +11,7 @@ fi
 
 alias f='find . -iname'
 
-alias ducks='du -cks * | sort -rn|head -11' # Lists the size of all the folders and files
+alias ducks='du -cksh * | sort -rn|head -11' # Lists the size of all the folders and files
 alias tu='top -o cpu'
 alias pscpu="ps -eo pcpu,pid,user,args | sort -k 1 -r | head -10"
 
