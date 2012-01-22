@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Send pull request from the feature branch in the same origin
+#
+# Uses https://github.com/defunkt/hub
+
+set -e
+
+current_branch=$(git status | head -1 | cut -d' ' -f4)
+gh_account=$(git remote -v | grep origin | grep push | cut -d: -f2 | cut -d/ -f1)
+
+hub pull-request -b $gh_account:dev -h $gh_account:$current_branch "$@"
