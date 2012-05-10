@@ -16,3 +16,5 @@ alias tu='top -o cpu'
 alias pscpu="ps -eo pcpu,pid,user,args | sort -k 1 -r | head -10"
 
 alias systail='tail -f /var/log/system.log'
+
+alias v='vim'

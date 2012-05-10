@@ -20,3 +20,34 @@ compinit
 
 # load every completion after autocomplete loads
 for config_file ($ZSH/**/completion.sh) source $config_file
+
+
+_cygan_comp() {
+  local word words
+  read -cA words
+  word="${words[2]}"
+
+  if [ "${#words}" -eq 2 ]; then
+    reply=(play stop ls upload update)
+  elif [ "${#words}" -eq 3 ] && [ "$word" = "play" ]; then
+    reply=(`mpc -h 192.168.20.205 listall`)
+  fi
+}
+compctl -K _cygan_comp cygan
+
+
+soundboard_autocompl() {
+  local word words
+  read -cA words
+  word="${words[2]}"
+
+  if [ "${#words}" -eq 2 ]; then
+    reply=(ls play -h)
+  elif [ "${#words}" -eq 3 ] && [ "$word" = "play" ]; then
+    reply=(`ls /Users/michalwrobel/workspace/soundboard/files`)
+  fi
+}
+compctl -K soundboard_autocompl soundboard.sh
+[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator 
+
+export DYLD_INSERT_LIBRARIES="/Users/michalwrobel/workspace/stderred/build/libstderred.dylib"
