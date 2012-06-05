@@ -23,7 +23,7 @@
 --type-set=zcml=.zcml
 
 # add markdown, textile, and reStructuredText
---type-set=plaintext=.md,.mdown,.markdown,.mkdn,.textile,.rst,.txt,.wiki
+--type-set=plaintext=.md,.mdown,.markdown,.mkdn,.textile,.rst,.txt,.wiki,.haml,.less,.scss
 
 --type-set=coffee=.coffee
 
