@@ -7,8 +7,7 @@ alias rs='rails server'
 alias rc='rails console'
 alias r='bundle exec rake'
 alias s='bundle exec rspec'
-alias re='bundle exec'
-
+alias be='bundle exec'
 
 alias fman='bundle exec foreman start'
 alias rlog='tail -f log/development.log'
