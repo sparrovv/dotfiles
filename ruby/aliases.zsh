@@ -1,5 +1,3 @@
-alias r='rvm use 1.9.2'
-
 alias migrate='r db:migrate'
 
 # Rails 3

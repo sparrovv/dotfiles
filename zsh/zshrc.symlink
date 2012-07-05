@@ -48,7 +48,7 @@ soundboard_autocompl() {
   fi
 }
 compctl -K soundboard_autocompl soundboard.sh
-[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator 
+#[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator 
 
-export DYLD_INSERT_LIBRARIES="/Users/michalwrobel/workspace/stderred/build/libstderred.dylib"
+# this necessary for some key bindings in osx
 stty -ixon -ixoff

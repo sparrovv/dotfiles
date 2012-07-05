@@ -1,5 +1,5 @@
 # $TERM
-set -g default-command "reattach-to-user-namespace -l zsh"
+#set -g default-command "reattach-to-user-namespace -l zsh"
 set -g default-terminal screen-256color
 
 # amount of time for display of status line messages
