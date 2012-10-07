@@ -12,3 +12,4 @@ alias rlog='tail -f log/development.log'
 
 alias mgr='r db:migrate'
 alias tmgr='RAILS_ENV=test migrate'
+alias irb=pry
