@@ -19,3 +19,4 @@ alias systail='tail -f /var/log/system.log'
 
 alias v='vim'
 alias :q='exit'
+alias gen_rand_password='openssl rand -base64 6'
