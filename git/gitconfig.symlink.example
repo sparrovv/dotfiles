@@ -36,3 +36,5 @@
         user = sparrovv
 [mergetool]
         keepBackup = false
+[branch]
+        autosetuprebase = always
