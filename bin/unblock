@@ -1,0 +1,3 @@
+#!/bin/sh
+
+sudo sed -i -e "s/^.*$1//" /etc/hosts
