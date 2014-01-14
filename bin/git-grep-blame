@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+
+grep = `git grep -n #{ARGV[0]} #{ARGV[1]}`
+
+interrupt = false
+
+grep.each_line do |file_with_line|
+  exit if interrupt
+
+  file, line_number, line = file_with_line.split(':', 3)
+  author = `git blame --line-porcelain -L #{line_number},#{line_number} #{file} | sed -n 's/^author //p'`
+  puts "#{ author.rstrip }: \"#{ line.lstrip.rstrip }\""
+
+  trap('INT'){interrupt = true}
+  sleep 0.4
+
+end

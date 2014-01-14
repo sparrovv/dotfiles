@@ -1,0 +1,20 @@
+#!/bin/bash
+set -e
+
+usage(){
+  echo 'find_and_kill - looks for a process with the "name" and kills it "kill -9 pid"'
+}
+
+name=$1
+
+find_process() {
+  ps aux | grep $1 | grep -v grep | grep -v find_and_kill
+}
+
+get_pid() {
+  ruby -e "p ARGF.read.split(/\s+/)[1]"
+}
+
+#kill_it() { }
+
+find_process $name | get_pid

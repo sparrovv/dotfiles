@@ -1,0 +1,10 @@
+#!/bin/sh
+
+session_name=$1
+
+tmux new -d -s $session_name
+tmux send-keys 'v' 'C-m'
+tmux split-window -h -t $session_name:0 -p 30
+tmux last-pane
+# go back to vim or maybe not...
+tmux attach -t $session_name

@@ -1,0 +1,6 @@
+#!/bin/sh
+#
+# Order branches by the last commit date DESC
+#
+
+git for-each-ref --sort=-committerdate refs/heads/

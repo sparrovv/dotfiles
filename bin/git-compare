@@ -1,0 +1,7 @@
+#!/bin/sh
+#
+# Compare your current branch with master on GitHub
+#
+
+branch_name=`git rev-parse --abbrev-ref HEAD`
+open "https://github.com/simplybusiness/chopin/compare/$branch_name"
