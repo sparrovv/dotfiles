@@ -40,25 +40,13 @@ need_push () {
   fi
 }
 
-rvm_prompt(){
-  if $(which rvm &> /dev/null)
-  then
-	  echo "%{$fg_bold[yellow]%}$(rvm tools identifier)%{$reset_color%}"
-	else
-	  echo ""
-  fi
+ruby_prompt(){
+  echo "%{$fg_bold[yellow]%}$(ruby -v | sed -e 's/ (.*$//')%{$reset_color%}"
 }
 
 directory_name(){
   echo "%{$fg_bold[cyan]%}%1/%\/%{$reset_color%}"
 }
 
-export PROMPT=$'\n$(rvm_prompt) in $(directory_name) $(git_dirty)$(need_push)\n› '
-set_prompt () {
-  export RPROMPT="%{$fg_bold[cyan]%}%{$reset_color%}"
-}
+export PROMPT=$'\n$(ruby_prompt) in $(directory_name) $(git_dirty)$(need_push)\n› '
 
-precmd() {
-  title "zsh" "%m" "%55<...<%~"
-  set_prompt
-}

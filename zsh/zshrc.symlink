@@ -1,13 +1,14 @@
 # shortcut to this dotfiles path is $ZSH
 export ZSH=$HOME/dotfiles
+OH_MY_ZSH=$HOME/.oh-my-zsh
 
 # your project folder that we can `c [tab]` to
 export PROJECTS=~/workspace
 
 # load some specific work stuff
-if test -f ~/projects/sbrc/dotfiles/.sbrc
+if test -f ~/projects/sbrc/.sbrc
 then
-  source ~/projects/sbrc/dotfiles/.sbrc
+  source ~/projects/sbrc/.sbrc
 fi
 
 # source every .zsh file in this rep
@@ -29,4 +30,9 @@ for config_file ($ZSH/**/completion.zsh) source $config_file
 # this necessary for some key bindings in osx
 stty -ixon -ixoff
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# should speed up the git autocompletion, if still slow, then ditch it.
+__git_files () { 
+  _wanted files expl 'local files' _files
+}
