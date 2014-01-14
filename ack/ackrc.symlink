@@ -23,9 +23,10 @@
 --type-set=zcml=.zcml
 
 # add markdown, textile, and reStructuredText
---type-set=plaintext=.md,.mdown,.markdown,.mkdn,.textile,.rst,.txt,.wiki,.haml,.less,.scss
+--type-set=plaintext=.md,.mdown,.markdown,.mkdn,.textile,.rst,.txt,.wiki,.haml,.less,.scss,.feature
 
 --type-set=coffee=.coffee
+--type-set=ruby=.prawn
 
 # plain text CSV files
 --type-set=csv=.txt,.csv,.tsv
@@ -34,3 +35,6 @@
 
 # types to ignore by default
 --nogettext
+
+--type-set=DUMB=.yml,.csv
+--noDUMB
