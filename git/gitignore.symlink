@@ -4,3 +4,8 @@
 *~
 *.swp
 *.rbc
+vendor/bundle
+.DS_Store
+tags
+.bundle/
+.sass-cache/
