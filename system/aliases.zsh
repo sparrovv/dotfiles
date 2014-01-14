@@ -20,3 +20,17 @@ alias systail='tail -f /var/log/system.log'
 alias v='vim'
 alias :q='exit'
 alias gen_rand_password='openssl rand -base64 6'
+alias ep="gotr --from en --to pl"
+alias pe="gotr --from pl --to en"
+
+man() {
+    env \
+    LESS_TERMCAP_mb=$(printf "\e[1;31m") \
+    LESS_TERMCAP_md=$(printf "\e[1;31m") \
+    LESS_TERMCAP_me=$(printf "\e[0m") \
+    LESS_TERMCAP_se=$(printf "\e[0m") \
+    LESS_TERMCAP_so=$(printf "\e[1;44;33m") \
+    LESS_TERMCAP_ue=$(printf "\e[0m") \
+    LESS_TERMCAP_us=$(printf "\e[1;32m") \
+    man "$@"
+}
