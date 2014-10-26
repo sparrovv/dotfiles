@@ -20,6 +20,15 @@ if [[ -a ~/.localrc ]]
 then
   source ~/.localrc
 fi
+if [[ -a ~/.after_zsh ]]
+then
+  source ~/.after_zsh
+fi
+
+if [[ -a ~/.lvlapp.conf ]]
+then
+  source ~/.lvlapp.conf
+fi
 
 # initialize autocomplete here, otherwise functions won't be loaded
 autoload -U compinit
@@ -36,3 +45,9 @@ source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 __git_files () { 
   _wanted files expl 'local files' _files
 }
+
+# source private stuff
+source ~/.zsh.private
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

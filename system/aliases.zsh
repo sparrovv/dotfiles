@@ -11,6 +11,12 @@ fi
 
 alias f='find . -iname'
 
+# tar -cvzf tarballname.tar.gz itemtocompress
+alias targz='tar -cvzf'
+
+#tar -zxvf dump.tar.gz
+alias untar='tar -zxvf'
+
 alias ducks='du -cksh * | sort -rn|head -11' # Lists the size of all the folders and files
 alias tu='top -o cpu'
 alias pscpu="ps -eo pcpu,pid,user,args | sort -k 1 -r | head -10"
@@ -20,8 +26,11 @@ alias systail='tail -f /var/log/system.log'
 alias v='vim'
 alias :q='exit'
 alias gen_rand_password='openssl rand -base64 6'
-alias ep="gotr --from en --to pl"
-alias pe="gotr --from pl --to en"
+alias resetdns='sudo killall -HUP mDNSResponder'
+
+alias ep="gotr en pl"
+alias pe="gotr pl en"
+alias gees="gotr en en -s"
 
 man() {
     env \
