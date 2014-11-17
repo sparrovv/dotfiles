@@ -13,3 +13,5 @@ alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias g="git"
 alias ga="git add ."
 alias gpr="git pull --rebase" 
+# only does it on master
+alias gbranchprune="git co master && git branch --merged | grep -v "\*" | xargs -n 1 git branch -d"
