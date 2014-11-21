@@ -1,4 +1,10 @@
 # $TERM
+#
+# Prerequisites:
+#
+# - reattach-to-user-namespace - brew install reattach-to-user-namespace
+# - tmux-vim-select-pane - https://gist.github.com/mislav/5189704
+
 set -g default-command "reattach-to-user-namespace -l zsh"
 set -g default-terminal screen-256color
 
