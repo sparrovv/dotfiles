@@ -32,6 +32,9 @@ alias ep="gotr en pl"
 alias pe="gotr pl en"
 alias gees="gotr en en -s"
 
+# open google with the phrase
+goo() { open "https://www.google.co.uk/#q=$@" }
+
 man() {
     env \
     LESS_TERMCAP_mb=$(printf "\e[1;31m") \
