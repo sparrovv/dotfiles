@@ -36,5 +36,5 @@
 # types to ignore by default
 --nogettext
 
---type-set=DUMB=.yml,.csv
+--type-set=DUMB=.csv
 --noDUMB
