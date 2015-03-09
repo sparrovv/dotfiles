@@ -1,4 +1,4 @@
-alias migrate='r db:migrate'
+alias migrate='rake db:migrate'
 
 # Rails 3
 alias rs='rails server'

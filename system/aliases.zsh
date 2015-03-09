@@ -31,6 +31,7 @@ alias resetdns='sudo killall -HUP mDNSResponder'
 alias ep="gotr en pl"
 alias pe="gotr pl en"
 alias gees="gotr en en -s"
+alias egi="env | grep -i"
 
 # open google with the phrase
 goo() { open "https://www.google.co.uk/#q=$@" }
