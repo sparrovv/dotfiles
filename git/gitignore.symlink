@@ -9,3 +9,4 @@ vendor/bundle
 tags
 .bundle/
 .sass-cache/
+.idea/
