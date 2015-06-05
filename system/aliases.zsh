@@ -32,6 +32,7 @@ alias ep="gotr en pl"
 alias pe="gotr pl en"
 alias gees="gotr en en -s"
 alias egi="env | grep -i"
+alias gen_ssl_key="ssh-keygen -t rsa -C" #provide an email
 
 # open google with the phrase
 goo() { open "https://www.google.co.uk/#q=$@" }
