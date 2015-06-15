@@ -14,4 +14,4 @@ alias g="git"
 alias ga="git add ."
 alias gpr="git pull --rebase" 
 # only does it on master
-alias gbranchprune="git co master && git branch --merged | grep -v "\*" | xargs -n 1 git branch -d"
+alias gbranchprune='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
